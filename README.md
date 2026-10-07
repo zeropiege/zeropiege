@@ -1,16 +1,24 @@
-## Hi there 👋
+# zeropiege
 
-<!--
-**zeropiege/zeropiege** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Une brève description de toi ou de ton projet.
 
-Here are some ideas to get you started:
+## À propos
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- 👨‍💻 Développeur/Web designer
+- 🌐 [Ton site web ou portfolio]
+- 📫 Comment te contacter (optionnel)
+- ⚡ Intérêts ou technologies préférées
+
+## Projets en vedette
+
+Liste quelques-uns de tes meilleurs projets avec des liens :
+- [Nom du projet](lien) - Brève description
+- [Nom du projet](lien) - Brève description
+
+## Statistiques GitHub (optionnel)
+
+Tu peux ajouter des badges ou des statistiques si tu le souhaites.
+
+---
+
+*Mis à jour le 7/10/2026
