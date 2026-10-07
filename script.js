@@ -16,9 +16,20 @@ document.addEventListener('DOMContentLoaded', function() {
     heroVideo.autoplay = false;
     heroVideo.muted = true; // Requis pour l'autoplay sur certains navigateurs
 
+    // Optimisation : utiliser un timestamp pour éviter les appels trop fréquents
+    let lastUpdate = 0;
+    const updateInterval = 16; // ~60fps
+
     // Fonction pour mettre à jour l'état de la vidéo basé sur le défilement
     function updateVideoState() {
         if (!heroSection) return;
+
+        // Limiter la fréquence des mises à jour pour améliorer les performances
+        const now = performance.now();
+        if (now - lastUpdate < updateInterval) {
+            return;
+        }
+        lastUpdate = now;
 
         // Calculer la position de défilement relative à la section héro
         const sectionTop = heroSection.offsetTop;
@@ -53,10 +64,46 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Gestion du formulaire de contact
+    // Gestion du formulaire de contact avec validation améliorée
     if (contactForm && formMessage) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
+
+            // Validation simple du formulaire
+            const nameInput = contactForm.querySelector('#name');
+            const emailInput = contactForm.querySelector('#email');
+            const messageInput = contactForm.querySelector('#message');
+
+            let isValid = true;
+            let errorMessage = '';
+
+            // Validation du nom
+            if (!nameInput.value.trim()) {
+                isValid = false;
+                errorMessage = 'Veuillez entrer votre nom';
+            }
+            // Validation de l'email
+            else if (!emailInput.value.trim()) {
+                isValid = false;
+                errorMessage = 'Veuillez entrer votre email';
+            }
+            // Validation simple du format email
+            else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim())) {
+                isValid = false;
+                errorMessage = 'Veuillez entrer un email valide';
+            }
+            // Validation du message
+            else if (!messageInput.value.trim()) {
+                isValid = false;
+                errorMessage = 'Veuillez entrer votre message';
+            }
+
+            if (!isValid) {
+                formMessage.textContent = errorMessage;
+                formMessage.className = 'form-message error';
+                formMessage.style.display = 'block';
+                return;
+            }
 
             // Ici, vous ajouteriez votre logique de soumission de formulaire
             // Pour l'exemple, nous afficherons un message de succès
@@ -75,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Événements de défilement et de redimensionnement
+    // Événements de défilement et de redimensionnement avec optimisation
     let ticking = false;
 
     function onScroll() {
@@ -88,8 +135,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    window.addEventListener('scroll', onScroll);
-    window.addEventListener('resize', onScroll);
+    // Utiliser des options de passeur d'événements pour améliorer les performances
+    const scrollOptions = { passive: true };
+    window.addEventListener('scroll', onScroll, scrollOptions);
+    window.addEventListener('resize', onScroll, scrollOptions);
 
     // Initialisation au chargement
     window.addEventListener('load', function() {
