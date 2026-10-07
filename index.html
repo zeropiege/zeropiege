@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[Nom de Marque] - [Produit/Service]</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Preload critical resources for better LCP -->
+    <link rel="preload" as="video" href="video.mp4">
+    <link rel="preload" as="style" href="style.css">
 </head>
 <body>
     <!-- Navigation fixe -->
@@ -23,7 +26,7 @@
     <!-- Section Héros avec vidéo contrôlée par le défilement -->
     <section id="hero" class="hero">
         <div class="hero-video-container">
-            <video class="hero-video" muted playsinline>
+            <video class="hero-video" muted playsinline poster="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAEBAQEBAQECAQECAQEAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/2wB////CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=">
                 <source src="video.mp4" type="video/mp4">
                 Votre navigateur ne supporte pas la vidéo HTML5.
             </video>
@@ -94,15 +97,15 @@
             <form class="contact-form" id="contactForm">
                 <div class="form-group">
                     <label for="name">[Nom]</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required aria-required="true">
                 </div>
                 <div class="form-group">
                     <label for="email">[Email]</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required aria-required="true">
                 </div>
                 <div class="form-group">
                     <label for="message">[Message]</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
                 </div>
                 <button type="submit" class="submit-button">[Envoyer le message]</button>
                 <div class="form-message" id="formMessage"></div>
