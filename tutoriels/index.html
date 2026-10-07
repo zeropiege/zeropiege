@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoriels - Zéro Piège</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        /* Styles spécifiques pour la page des tutoriels */
+        .tutorials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .tutorial-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 0;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .tutorial-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+        .tutorial-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        .tutorial-card p {
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+            color: #rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+        .tutorial-card .tutorial-link {
+            display: inline-block;
+            background-color: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 0;
+            margin-top: auto;
+        }
+        .tutorial-card .tutorial-link:hover {
+            background-color: #ffffff;
+            color: #0A1A2F;
+        }
+        .tutorial-badge {
+            display: inline-block;
+            background-color: rgba(46, 204, 113, 0.2);
+            color: #58D68D;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-radius: 0;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation fixe (réutiliser votre navbar existante) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Zéro Piège</div>
+            <ul class="nav-menu">
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/tutoriels" class="active">Tutoriels</a></li>
+                <li><a href="/about">À propos</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- En-tête de la page -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1 class="hero-title">Tutoriels Zéro Piège</h1>
+                <p class="hero-subtitle">Découvrez les ressources les plus puissantes, mises à jour chaque semaine</p>
+                <div class="hero-text-states">
+                    <p class="hero-text-state active">Apprenez. Maîtrisez. Partagez.</p>
+                    <p class="hero-text-state">Des ressources pratiques pour passer à l'action</p>
+                    <p class="hero-text-state">Votre bibliothèque de savoir-faire technique</p>
+                </div>
+                <a href="/tutoriels/claude-watch" class="hero-cta">Commencer par le premier tutoriel</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Liste des tutoriels -->
+    <section class="section">
+        <div class="section-container">
+            <h2 class="section-title">Découvrez les tutoriels</h2>
+            <p class="section-description">Des ressources pratiques, testées et approuvées - nouvelles chaque semaine</p>
+            
+            <div class="tutorials-grid">
+                <!-- Premier tutoriel : Claude Watch -->
+                <div class="tutorial-card">
+                    <div class="tutorial-badge">Nouveau</div>
+                    <h3>Donnez des yeux à Claude</h3>
+                    <p>Apprenez à installer et utiliser Claude Watch pour analyser n'importe quelle vidéo (YouTube, TikTok, fichiers locaux) et en extraire le transcript, les scènes clés, le hook et la structure.</p>
+                    <a href="/tutoriels/claude-watch" class="tutorial-link">Commencer le tutoriel</a>
+                </div>
+                
+                <!-- Espace pour les futurs tutoriels -->
+                <div class="tutorial-card" style="opacity: 0.5; border-style: dashed;">
+                    <div class="tutorial-badge">À venir</div>
+                    <h3>Prochain tutoriel</h3>
+                    <p>Une nouvelle ressource puissante sera ajoutée chaque semaine. Restez à l'affût !</p>
+                    <a href="#" class="tutorial-link" style="opacity: 0.5;">Bientôt disponible</a>
+                </div>
+                
+                <div class="tutorial-card" style="opacity: 0.5; border-style: dashed;">
+                    <div class="tutorial-badge">À venir</div>
+                    <h3>Prochain tutoriel</h3>
+                    <p>Des ressources sur le développement web, l'optimisation de performance et bien plus encore.</p>
+                    <a href="#" class="tutorial-link" style="opacity: 0.5;">Bientôt disponible</a>
+                </div>
+                
+                <div class="tutorial-card" style="opacity: 0.5; border-style: dashed;">
+                    <div class="tutorial-badge">À venir</div>
+                    <h3>Prochain tutoriel</h3>
+                    <p>Votre plateforme de savoir-faire technique s'enrichit chaque semaine.</p>
+                    <a href="#" class="tutorial-link" style="opacity: 0.5;">Bientôt disponible</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appel à l'action pour la communauté -->
+    <section class="section">
+        <div class="section-container">
+            <h2 class="section-title">Rejoignez la communauté Zéro Piège</h2>
+            <p class="section-description">Chaque semaine, une nouvelle ressource puissante est ajoutée. Soyez parmi les premiers à découvrir les outils qui transforment votre façon de travailler.</p>
+            <div class="hero-text-states" style="justify-content: center;">
+                <p class="hero-text-state">🔔 Abonnez-vous pour ne rien manquer</p>
+                <p class="hero-text-state">💬 Partagez vos découvertes avec #ZéroPiège</p>
+                <p class="hero-text-state">🚀 Propulsez vos compétences chaque semaine</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (réutiliser votre footer existant) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Zéro Piège. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
