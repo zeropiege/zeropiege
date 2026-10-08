@@ -6,7 +6,7 @@ export default function About() {
           [À Propos]
         </h2>
         <p className="section-description text-lg text-center text-white/70 max-w-2xl mx-auto">
-          [Description de l'entreprise/service]
+          [Description de l&apos;entreprise/service]
         </p>
       </div>
     </section>
