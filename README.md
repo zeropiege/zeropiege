@@ -2,7 +2,7 @@
 
 Site web interactif avec vidéo contrôlée par le défilement
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/zeropiege/zeropiege/deploy-status)](https://app.netlify.com/sites/zeropiege/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ce4f3479-7720-4a23-8806-1e492de2ff9d/deploy-status)](https://app.netlify.com/projects/zeropiege/deploys)
 
 ## Description
 
