@@ -2,6 +2,8 @@
 
 Site web interactif avec vidéo contrôlée par le défilement
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/zeropiege/zeropiege/deploy-status)](https://app.netlify.com/sites/zeropiege/deploys)
+
 ## Description
 
 Ce projet est un site web moderne et interactif comportant une vidéo d'arrière-plan qui se joue en fonction du défilement de la page. Il comprend une navigation fixe, des sections pour présenter les fonctionnalités, un formulaire de contact et un pied de page.
@@ -33,6 +35,14 @@ Ce projet est un site web moderne et interactif comportant une vidéo d'arrière
 1. Clonez ce dépôt
 2. Ouvrez `index.html` dans votre navigateur
 3. Aucune dépendance supplémentaire requise
+
+## Déploiement sur Netlify
+
+Le site est configuré pour un déploiement automatique sur Netlify :
+
+1. Connectez votre dépôt GitHub à Netlify
+2. Le fichier `netlify.toml` configure automatiquement le build
+4. Le déploiement se fait automatiquement à chaque push sur la branche `main`
 
 ## Personnalisation
 
