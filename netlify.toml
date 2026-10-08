@@ -34,11 +34,6 @@
   to = "/"
   status = 301
 
-[[redirects]]
-  from = "/vercel/*"
-  to = "/404"
-  status = 404
-
 [functions]
   node_bundler = "esbuild"
   included_files = ["**/*.js", "**/*.ts", "**/*.json"]

@@ -40,9 +40,10 @@ document.addEventListener('DOMContentLoaded', function() {
         let progress = (scrollPosition - sectionTop + window.innerHeight) / (sectionHeight + window.innerHeight);
         progress = Math.max(0, Math.min(1, progress)); // Clamp entre 0 et 1
 
-        // Mettre à jour le temps actuel de la vidéo basé sur la progression
-        const currentTime = heroVideo.duration * progress;
-        heroVideo.currentTime = currentTime;
+        // Mettre à jour le temps actuel de la vidéo (si la durée est connue)
+        if (Number.isFinite(heroVideo.duration)) {
+            heroVideo.currentTime = heroVideo.duration * progress;
+        }
 
         // Mettre à jour les états de texte basé sur la progression
         updateTextStates(progress);
@@ -105,20 +106,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            // Ici, vous ajouteriez votre logique de soumission de formulaire
-            // Pour l'exemple, nous afficherons un message de succès
+            const submitButton = contactForm.querySelector('.submit-button');
+            submitButton.disabled = true;
 
-            formMessage.textContent = 'Message envoyé avec succès !';
-            formMessage.className = 'form-message success';
-            formMessage.style.display = 'block';
-
-            // Réinitialiser le formulaire
-            contactForm.reset();
-
-            // Masquer le message après 5 secondes
-            setTimeout(() => {
-                formMessage.style.display = 'none';
-            }, 5000);
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(new FormData(contactForm)).toString()
+            })
+                .then(function(response) {
+                    if (!response.ok) throw new Error('HTTP ' + response.status);
+                    formMessage.textContent = 'Message envoyé avec succès !';
+                    formMessage.className = 'form-message success';
+                    contactForm.reset();
+                })
+                .catch(function() {
+                    formMessage.textContent = "Erreur lors de l'envoi. Veuillez réessayer.";
+                    formMessage.className = 'form-message error';
+                })
+                .finally(function() {
+                    formMessage.style.display = 'block';
+                    submitButton.disabled = false;
+                    setTimeout(function() { formMessage.style.display = 'none'; }, 5000);
+                });
         });
     }
 
