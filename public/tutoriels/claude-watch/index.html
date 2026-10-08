@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donnez des yeux à Claude : Analysez n'importe quelle vidéo gratuitement - Zéro Piège</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        /* Styles spécifiques pour les tutoriels détaillés */
+        .tutorial-content {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        .tutorial-step {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid #ffffff;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .tutorial-step h3 {
+            color: #ffffff;
+            margin-top: 0;
+        }
+        .tutorial-step pre {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+            border-radius: 0;
+            overflow-x: auto;
+        }
+        .tutorial-step code {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 0.2rem 0.4rem;
+            border-radius: 0;
+            font-family: 'Courier New', monospace;
+        }
+        .tutorial-note {
+            background: rgba(46, 204, 113, 0.1);
+            border-left: 3px solid #58D68D;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .tutorial-warning {
+            background: rgba(231, 76, 60, 0.1);
+            border-left: 3px solid #E74C3C;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .promo-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 0;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .promo-box h3 {
+            color: white;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        .promo-box p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .back-link:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation fixe (réutiliser votre navbar existante) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Zéro Piège</div>
+            <ul class="nav-menu">
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/tutoriels" class="active">Tutoriels</a></li>
+                <li><a href="/#about">À propos</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- En-tête de la page tutoriel -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1 class="hero-title">Donnez des yeux à Claude</h1>
+                <p class="hero-subtitle">Analysez n'importe quelle vidéo gratuitement avec Claude Watch</p>
+                <div class="hero-text-states">
+                    <p class="hero-text-state active">Installez Claude Watch en 2 minutes</p>
+                    <p class="hero-text-state">Analysez YouTube, TikTok, Vimeo et fichiers locaux</p>
+                    <p class="hero-text-state">Extraits transcript, scènes clés, hook et structure</p>
+                </div>
+                <a href="#" class="hero-cta" onclick="window.history.back(); return false;">← Retour aux tutoriels</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenu détaillé du tutoriel -->
+    <section class="section">
+        <div class="section-container tutorial-content">
+            <p class="section-description">Apprenez à installer et utiliser Claude Watch pour analyser n'importe quelle vidéo (YouTube, TikTok, fichiers locaux) et en extraire le transcript, les scènes clés, le hook et la structure.</p>
+
+            <!-- Étape 1 : Installation -->
+            <div class="tutorial-step">
+                <h3>1. Installe Claude Watch</h3>
+                <p>Colle simplement ce prompt dans Claude Code :</p>
+                <pre><code>Installe Claude Watch pour moi depuis le repo officiel https://github.com/taoufik123-collab/claude-watch. Exécute toi-même dans le terminal `claude plugin marketplace add taoufik123-collab/claude-watch`, puis `claude plugin install watch@claude-watch --scope user --yes`. Vérifie que le plugin est bien installé et dis-moi clairement si je dois relancer Claude Code avant d'utiliser la commande /watch. Ne me redonne pas seulement les commandes : exécute-les.</code></pre>
+                <div class="tutorial-note">
+                    <strong>Astuce :</strong> Cette commande installe officiellement le plugin Claude Watch depuis le répertoire officiel. Une fois installé, il sera disponible dans tous vos projets Claude Code.
+                </div>
+            </div>
+
+            <!-- Étape 2 : Utilisation -->
+            <div class="tutorial-step">
+                <h3>2. Fais-lui regarder une vidéo</h3>
+                <p>Remplace simplement le texte entre crochets. YouTube, TikTok, Instagram, Vimeo et les fichiers locaux sont pris en charge. Pour une vidéo sans sous-titres, Claude Watch peut proposer Whisper pour transcrire l'audio.</p>
+                <pre><code>/watch [COLLE LE LIEN OU LE CHEMIN DU FICHIER] Résume cette vidéo, puis détaille son hook, sa structure, les éléments visuels, le son et les moments clés.</code></pre>
+                <div class="tutorial-note">
+                    <strong>Exemple concret :</strong><br>
+                    <code>/watch https://www.youtube.com/watch?v=dQw4w9WgXcQ Résume cette vidéo, puis détaille son hook, sa structure, les éléments visuels, le son et les moments clés.</code>
+                </div>
+                <div class="tutorial-warning">
+                    <strong>Note importante :</strong> Pour une vidéo sans sous-titres, Claude Watch peut proposer d'utiliser Whisper pour transcrire l'audio. Acceptez cette option si proposée pour obtenir un transcript complet.
+                </div>
+            </div>
+
+            <!-- Ressources complémentaires -->
+            <div class="tutorial-step">
+                <h3>3. Ressources complémentaires</h3>
+                <p>Tu as d'autres ressources comme ça ? Je partage les ressources les plus puissantes dans Zéro Piège (<a href="https://zeropiege.netlify.app" target="_blank">zeropiege.netlify.app</a>), et c'est mis à jour chaque semaine ! 😎</p>
+                <p>Visite régulièrement <a href="https://zeropiege.netlify.app" target="_blank">zeropiege.netlify.app</a> pour découvrir de nouveaux outils puissants comme celui-ci, mis à jour chaque semaine.</p>
+            </div>
+
+            <!-- Boîte promotionnelle Agentic Academy -->
+            <div class="promo-box">
+                <h3>🚀 Passez au niveau supérieur avec l'Agentic Academy</h3>
+                <p>Apprenez à tout construire avec Claude Code, même sans savoir coder.</p>
+                <p>Ce que vous venez de voir est complètement gratuit. Si je partage ce genre de ressources en accès libre, imaginez ce qui vous attend dans l'Agentic Academy ! :) Les membres ont accès à des outils et techniques bien plus puissants pour créer leurs propres projets avec l'IA, que vous partiez de zéro ou que vous utilisiez déjà Claude.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Zéro Piège. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
