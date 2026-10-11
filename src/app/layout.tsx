@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "[Nom de Marque] - [Produit/Service]",
-  description: "[Description de votre site]",
+  title: "Zéro Piège - Les ressources IA les plus puissantes, chaque semaine",
+  description: "Zéro Piège partage chaque semaine des outils et des tutoriels IA testés, expliqués pas à pas et sans mauvaise surprise.",
 };
 
 export const viewport: Viewport = {
