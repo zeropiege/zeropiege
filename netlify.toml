@@ -34,6 +34,16 @@
   to = "/"
   status = 301
 
+[[redirects]]
+  from = "/tutoriels"
+  to = "/tutoriels/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/tutoriels/claude-watch"
+  to = "/tutoriels/claude-watch/index.html"
+  status = 200
+
 [functions]
   node_bundler = "esbuild"
   included_files = ["**/*.js", "**/*.ts", "**/*.json"]

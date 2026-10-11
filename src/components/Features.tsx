@@ -1,16 +1,16 @@
 export default function Features() {
   const features = [
     {
-      title: '[Fonctionnalité 1]',
-      description: '[Description de la fonctionnalité 1]'
+      title: 'Des outils testés',
+      description: 'Chaque ressource est essayée avant d’être partagée, pour que vous alliez droit à ce qui fonctionne.'
     },
     {
-      title: '[Fonctionnalité 2]',
-      description: '[Description de la fonctionnalité 2]'
+      title: 'Des tutoriels pas à pas',
+      description: 'Des guides clairs, avec les commandes à copier-coller, pour débutants comme pour confirmés.'
     },
     {
-      title: '[Fonctionnalité 3]',
-      description: '[Description de la fonctionnalité 3]'
+      title: 'Mis à jour chaque semaine',
+      description: 'Une nouvelle ressource puissante arrive chaque semaine. Revenez régulièrement.'
     }
   ];
 
@@ -18,10 +18,10 @@ export default function Features() {
     <section id="features" className="section py-16 px-6 bg-[#0A1A2F]">
       <div className="section-container max-w-6xl mx-auto">
         <h2 className="section-title text-3xl md:text-4xl font-bold uppercase text-center text-white mb-8">
-          [Fonctionnalités]
+          Ce que vous trouverez ici
         </h2>
         <p className="section-description text-lg text-center text-white/70 mb-12 max-w-2xl mx-auto">
-          [Description des fonctionnalités]
+          Tout ce qu’il faut pour passer à l’action avec l’IA, sans perdre de temps.
         </p>
         <div className="features-grid grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (

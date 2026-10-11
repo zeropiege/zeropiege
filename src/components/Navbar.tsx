@@ -20,7 +20,7 @@ export default function Navbar() {
     }`}>
       <div className="nav-container max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <div className="nav-logo text-xl font-bold uppercase tracking-wider text-white">
-          [Nom de Marque]
+          Zéro Piège
         </div>
         <ul className="nav-menu flex list-none gap-8 md:gap-10">
           <li>
@@ -29,8 +29,8 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="#features" className="text-white hover:text-white/80 transition-colors relative py-2 after:absolute after:bottom-[-5px] after:left-0 after:h-[2px] after:bg-white after:w-0 hover:after:w-full after:transition-all after:duration-300">
-              Fonctionnalités
+            <Link href="/tutoriels" className="text-white hover:text-white/80 transition-colors relative py-2 after:absolute after:bottom-[-5px] after:left-0 after:h-[2px] after:bg-white after:w-0 hover:after:w-full after:transition-all after:duration-300">
+              Tutoriels
             </Link>
           </li>
           <li>

@@ -9,9 +9,9 @@ export default function Hero() {
   const [textState, setTextState] = useState(0);
 
   const textStates = [
-    '[État de texte 1]',
-    '[État de texte 2]',
-    '[État de texte 3]'
+    'Des ressources puissantes, testées et approuvées',
+    'Des tutoriels pas à pas, en français',
+    'Une nouvelle ressource chaque semaine'
   ];
 
   useEffect(() => {
@@ -105,7 +105,7 @@ export default function Hero() {
           className="hero-video absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover"
           muted
           playsInline
-          poster="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAEBAQEBAQECAQECAQEAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/2wB////CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+          poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
         >
           <source src="/video.mp4" type="video/mp4" />
           Votre navigateur ne supporte pas la vidéo HTML5.
@@ -113,10 +113,10 @@ export default function Hero() {
         <div className="hero-overlay absolute inset-0 flex items-center justify-center text-center px-6 bg-gradient-to-b from-[#0A1A2F]/70 to-[#0A1A2F]/90">
           <div className="hero-content relative z-10 text-white max-w-3xl min-h-[200px]">
             <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight mb-6 leading-tight">
-              [Titre Principal]
+              Zéro Piège
             </h1>
             <p className="hero-subtitle text-xl md:text-2xl lg:text-3xl font-normal opacity-90 mb-10 max-w-xl mx-auto leading-relaxed">
-              [Sous-titre d'accroche]
+              Des outils et des tutoriels IA, sans mauvaise surprise
             </p>
             <div className="hero-text-states h-12 flex items-center justify-center mb-10">
               <p className={`hero-text-state transition-opacity duration-500 ${textState === 0 ? 'opacity-100' : 'opacity-0'}`}>
@@ -129,8 +129,8 @@ export default function Hero() {
                 {textStates[2]}
               </p>
             </div>
-            <a href="#features" className="hero-cta inline-block bg-transparent text-white border-2 border-white px-10 py-4 text-lg font-medium uppercase tracking-wider hover:bg-white hover:text-[#0A1A2F] transition-all duration-300">
-              Découvrir
+            <a href="/tutoriels" className="hero-cta inline-block bg-transparent text-white border-2 border-white px-10 py-4 text-lg font-medium uppercase tracking-wider hover:bg-white hover:text-[#0A1A2F] transition-all duration-300">
+              Voir les tutoriels
             </a>
           </div>
         </div>
