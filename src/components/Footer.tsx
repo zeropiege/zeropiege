@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="footer bg-[#081524] border-t border-white/10 py-8">
       <div className="footer-container max-w-6xl mx-auto px-6 text-center">
         <p className="text-sm text-white/60">
-          &copy; {new Date().getFullYear()} [Nom de Marque]. Tous droits réservés.
+          &copy; {new Date().getFullYear()} Zéro Piège. Tous droits réservés.
         </p>
       </div>
     </footer>
